@@ -4,6 +4,6 @@ import './index.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
- <h1>Hello rahul</h1>
+ <h1>Hello Rahul</h1>
 );
 
