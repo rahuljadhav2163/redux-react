@@ -1,9 +1,15 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
+import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import store from './app/store.js'; 
+import { createRoot } from 'react-dom';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+import Home from './views/Home/Home';
+
+const root = createRoot(document.getElementById('root'));
+
 root.render(
- <h1>Hello Rahul</h1>
+  <Provider store={store}>
+    <Home />
+  </Provider>
 );
-

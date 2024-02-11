@@ -1,8 +1,8 @@
 import React from 'react'
-
+import AddTodo from '../../components/AddTodo/AddTodo'
 function Home() {
   return (
-    <div>Home</div>
+    <div><AddTodo/></div>
   )
 }
 
