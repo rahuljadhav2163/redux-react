@@ -1,3 +1,4 @@
+// todo.js
 import { createSlice, nanoid } from "@reduxjs/toolkit";
 
 const initialState = {
@@ -17,9 +18,16 @@ export const todo = createSlice({
     },
     removetodo: (state, action) => {
       state.todos = state.todos.filter((todo) => todo.id !== action.payload);
+    },
+    edittodo: (state, action) => {
+      const { id, text } = action.payload;
+      const todoToEdit = state.todos.find(todo => todo.id === id);
+      if (todoToEdit) {
+        todoToEdit.text = text;
+      }
     }
   }
 });
 
-export const { addtodo, removetodo } = todo.actions;
+export const { addtodo, removetodo, edittodo } = todo.actions;
 export default todo.reducer;
