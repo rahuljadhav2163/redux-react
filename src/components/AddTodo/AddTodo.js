@@ -44,10 +44,10 @@ function AddTodo() {
         <button type='submit' className='btn'>{editingId ? 'Edit Todo' : 'Add Todo'}</button>
       </form>
       <p className='heading'>ToDo's</p>
-      <div className='todo-container'>
+      <div >
         {
           todos.map((todo) => (
-            <div key={todo.id}>
+            <div className='todo-container'>
               <p className='text'>{todo.text}</p>
               <button className='remove-btn' onClick={() => { dispatch(removetodo(todo.id)) }} type='button'>🗑️</button>
               <button className='edit-btn' onClick={() => { editTodoHandler(todo.id) }} type='button'>🖋️</button>

@@ -1,15 +1,18 @@
-body{
+body {
     background-color: aliceblue;
 }
-.form-container{
+
+.form-container {
     display: flex;
-    margin:80px 550px;
+    flex-direction: column;
+    margin: 80px auto;
+    max-width: 600px; 
 }
-.inputfield{
-    height: 35px;
-    width: 250px;
-    display: block;
-    margin: 0px auto;
+
+.inputfield {
+    height: 40px;
+    width: 100%;
+    margin: 10px 0;
     background-color: #00001a;
     color: white;
     font-size: 18px;
@@ -17,34 +20,39 @@ body{
     border: none;
     padding-left: 8px;
 }
-.btn{
-    display: block;
-    margin: 0px auto;
-    padding: 0px 20px;
+
+.btn {
+    width: 100px;
+    margin: 10px auto;
+    padding: 10px;
     background-color: #4d79ff;
     color: white;
     font-size: 18px;
     border-radius: 5px;
     border: none;
 }
-.heading{
+
+.heading {
     text-align: center;
     font-size: 25px;
     font-weight: 600;
 }
-.todo-container{
+
+.todo-container {
     width: 1250px;
-    height: 55px;
+    height: auto;
     background-color: #00001a;
     color: white;
-    margin: 0px auto;
+    margin: 10px auto;
     border-radius: 7px;
     position: relative;
 }
-.text{
+
+.text {
     font-size: 23px;
     padding: 14px 20px;
 }
+
 .remove-btn{
     position: absolute;
     top: 10px;
@@ -56,7 +64,7 @@ body{
     border-radius: 5px;
     cursor: pointer;
 }
-.edit-btn{
+.edit-btn {
     position: absolute;
     top: 10px;
     right: 70px;
@@ -66,4 +74,42 @@ body{
     border: none;
     border-radius: 5px;
     cursor: pointer;
+}
+
+.remove-btn {
+    right: 10px;
+}
+
+.edit-btn {
+    right: 70px;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .form-container {
+        margin: 80px auto;
+        max-width: 80%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .form-container {
+        margin: 40px auto;
+        max-width: 90%;
+    }
+
+    .inputfield,
+    .btn {
+        width: 100%;
+    }
+
+    .remove-btn{
+        right: 10px;
+    }
+    .edit-btn {
+        right: 70px;
+    }
+    .todo-container{
+        width: 100%;
+    }
 }
